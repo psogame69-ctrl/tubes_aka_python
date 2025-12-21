@@ -14,15 +14,15 @@ def maxKataIteratif(teks):
             maxKata = kata
     return maxKata
 
-def maxKataRekursif(listKata, maxKata=""):
-    if not listKata:
+def maxKataRekursif(listKata, index=0, maxKata=""):
+    if index == len(listKata):
         return maxKata
-    
-    firstKata = listKata[0]
-    if len(firstKata) > len(maxKata):
-        maxKata = firstKata
-        
-    return maxKataRekursif(listKata[1:], maxKata)
+
+    kata = listKata[index]
+    if len(kata) > len(maxKata):
+        maxKata = kata
+
+    return maxKataRekursif(listKata, index + 1, maxKata)
 
 def main():
     st.set_page_config(page_title="Analisis Algoritma: Iteratif vs Rekursif", layout="wide")
