@@ -36,7 +36,7 @@ def main():
     default_text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
     user_text = st.text_area("Masukkan teks yang ingin dianalisis:", default_text, height=150)
 
-    num_runs = 100
+    num_runs = 1
 
     if st.button("Mulai Analisis"):
         listKata = user_text.split()
